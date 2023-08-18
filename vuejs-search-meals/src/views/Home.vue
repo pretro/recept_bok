@@ -1,5 +1,5 @@
 <template>
-  <pre> {{ meals }} </pre>
+  <input type="text">
 </template>
 
 <script setup>

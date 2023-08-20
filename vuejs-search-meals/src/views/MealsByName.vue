@@ -18,8 +18,7 @@
           Accusamus id voluptatem dolore facilis itaque est quibusdam
         </p>
         <div class="flex items-center justify-between">
-          <a :href="meal.strYoutube" target="_blank"
-            class="px-3 py-2 rounded border-2 border-red-600 text-white bg-red-500 hover:bg-red-600 transition-colors">Youtube</a>
+          <YouTubeButton :href="meal.strYoutube" />
         </div>
       </div>
     </div>
@@ -30,6 +29,7 @@ import { computed } from '@vue/reactivity';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import store from '../store';
+
 
 const route = useRoute();
 const keyword = ref('');

@@ -18,7 +18,9 @@
           Accusamus id voluptatem dolore facilis itaque est quibusdam
         </p>
         <div class="flex items-center justify-between">
-          <YouTubeButton :href="meal.strYoutube" />
+          <YouTubeButton :href="meal.strYoutube" >
+          YouTube
+          </YouTubeButton>
         </div>
       </div>
     </div>
@@ -29,6 +31,7 @@ import { computed } from '@vue/reactivity';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import store from '../store';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 
 const route = useRoute();

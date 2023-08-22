@@ -9,7 +9,22 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-    <MealItem v-for="meal of meals" :key="meal.idMeal"  :meal="meal"/>
+    <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
+      <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
+      <img :src="meal.strMealThumb" :alt="strMeal" class="rounded-t-xl w-full h-48 object-cover">
+      </router-link>
+      <div class="p-3">
+        <h3 class="font-bold">{{ meal.strMeal }}</h3>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Accusamus id voluptatem dolore facilis itaque est quibusdam
+        </p>
+        <div class="flex items-center justify-between">
+          <YouTubeButton :href="meal.strYoutube" >
+          YouTube
+          </YouTubeButton>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>

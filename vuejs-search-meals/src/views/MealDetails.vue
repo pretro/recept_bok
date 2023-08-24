@@ -24,7 +24,7 @@
         <ul>
           <template v-for="(el, ind) of new Array(20)">
             <li v-if="meal[`strIngredient${ind + 1}`]">
-              {{ ind + 1 }}. {{ meal[`strIngredient${ind + 1}`] }}
+            {{ ind + 1 }}. {{ meal[`strIngredient${ind + 1}`] }}
             </li>
           </template>
         </ul>
@@ -34,19 +34,24 @@
         <ul>
           <template v-for="(el, ind) of new Array(20)">
             <li v-if="meal[`strMeasure${ind + 1}`]">
-              {{ ind + 1 }}. {{ meal[`strMeasure${ind + 1}`] }}
+            {{ ind + 1 }}. {{ meal[`strMeasure${ind + 1}`] }}
             </li>
           </template>
         </ul>
       </div>
       <div class="mt-4">
         <YouTubeButton :href="meal.strYoutube" />
-        <a :href="meal.strSource" target="_blank"
-          class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600 transition-colors">
+        <a
+          :href="meal.strSource"
+          target="_blank"
+          class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600 transition-colors"
+        >
           View Original Source
         </a>
       </div>
     </div>
+
+
   </div>
 </template>
 
